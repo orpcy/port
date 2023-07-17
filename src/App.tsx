@@ -1,24 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from "./Components/Header";
+import "./App.css";
+import Socials from "./Components/Socials";
+import { BsDashLg } from "react-icons/bs";
+import Skills from "./Components/Skills";
+import Footer from "./Components/Footer";
+import Contact from "./Components/Contact";
+import Projects from "./Components/Projects";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <div className="main">
+        <div className="intro">
+          <h6>Hello there, I am</h6>
+          <h2>SOFIYULLAHI JAMIU</h2>
+          <h4>Fullstack Software Engineer and UI/UX Designer</h4>
+          <div className="more-intro">
+            <BsDashLg size={26} />
+            <p>
+              In a digital realm where imagination takes shape, I am a Full Stack Software
+              Engineer and UI/UX Designer, weaving innovation into every line of
+              code and pixel of design. With a passion for seamless user
+              experiences and sleek interfaces, I bring ideas to life with
+              creativity and technical finesse. Let's create something
+              extraordinary together.
+            </p>
+          </div>
+          <div className="view-start">
+            <a href="#web_projects">VIEW MY PROJECTS</a>
+            <a href="#contact">START A PROJECT</a>
+          </div>
+        </div>
+
+        <Skills />
+        <Projects />
+        <Contact />
+      </div>
+      <Footer />
+
+      <Socials />
     </div>
   );
 }
