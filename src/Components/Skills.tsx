@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import SkillCard from "./SkillCard";
 
 interface SkillTypes {
   id: string;
@@ -8,7 +9,7 @@ interface SkillTypes {
 }
 
 const Skills = () => {
-  const [skills] = useState<Array<SkillTypes>>([
+  const [skillsA] = useState<Array<SkillTypes>>([
     {
       id: "ReactJS_skill",
       content: "ReactJS",
@@ -24,10 +25,16 @@ const Skills = () => {
     { id: "HTML5_skill", content: "HTML5", percentage: "100%", value: "100" },
     { id: "CSS3_skill", content: "CSS3", percentage: "100%", value: "100" },
     {
-      id: "JavaScript_skill",
+      id: "Javascript_skill",
       content: "JavaScript",
       percentage: "98%",
       value: "98",
+    },
+    {
+      id: "Typescript_skill",
+      content: "Typescript",
+      percentage: "95%",
+      value: "95",
     },
     {
       id: "Redux_skill",
@@ -40,6 +47,21 @@ const Skills = () => {
       content: "NextJS",
       percentage: "90%",
       value: "90",
+    },
+  ]);
+
+  const [skillsB] = useState<Array<SkillTypes>>([
+    {
+      id: "GraphQL_skill",
+      content: "GraphQL",
+      percentage: "96%",
+      value: "96",
+    },
+    {
+      id: "RestAPI_skill",
+      content: "RestAPI",
+      percentage: "98%",
+      value: "98",
     },
     {
       id: "Database_skill",
@@ -60,6 +82,12 @@ const Skills = () => {
       value: "92",
     },
     {
+      id: "MongoDB_skill",
+      content: "MongoDB",
+      percentage: "98%",
+      value: "98",
+    },
+    {
       id: "UI/UX_skill",
       content: "UI/UX Design",
       percentage: "94%",
@@ -77,32 +105,12 @@ const Skills = () => {
     <div className="skills">
       <h4>EXPERTISE</h4>
       <div className="skills-wrapper">
-        <div className="skills-inner">
-          {skills.map((skill) => {
-            const { id, content, percentage } = skill;
-            return (
-              <div className="progress-wrap" key={id}>
-                <div className="skills-percent">
-                  <span>{content}</span>
-                  {/* <span>{porcentage}</span> */}
-                </div>
-                <div className="progress">
-                  <div
-                    className="progress-bar"
-                    role="progressbar"
-                    style={{ width: percentage }}
-                    // aria-valuenow={value}
-                    // aria-valuemin="0"
-                    // aria-valuemax="100"
-                  ></div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-        <div className="skills-img">
+        <SkillCard skills={skillsA} />
+        <div className="divider"></div>
+        <SkillCard skills={skillsB} />
+        {/* <div className="skills-img">
           <img src="/img/computer.png" alt="programming" />
-        </div>
+        </div> */}
       </div>
     </div>
   );

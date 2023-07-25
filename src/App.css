@@ -234,11 +234,15 @@ header svg {
 
 .skills-wrapper {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+}
+
+.skills-wrapper .divider {
+  border: 1.5px solid rgb(14, 86, 86);
 }
 
 .skills-inner {
-  width: 50%;
+  width: 47%;
 }
 .skills-inner .progress {
   background-color: #cde1f8;
@@ -474,6 +478,10 @@ footer img {
 }
 
 @media screen and (max-width: 768px) {
+  .skills-wrapper .divider {
+    display: none;
+  }
+
   .main,
   footer {
     width: 80%;
@@ -493,11 +501,11 @@ footer img {
 
   .skills-wrapper {
     flex-direction: column;
+    margin-bottom: 30px;
   }
 
   .skills-inner {
     width: 100%;
-    margin-bottom: 30px;
   }
 
   .skills-img {
