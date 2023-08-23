@@ -15,7 +15,9 @@ const Contact = () => {
     dispatch(handleChange({ name, value }));
   };
 
-  const handleTextAreaChangeDispatch = (e: ChangeEvent<HTMLTextAreaElement>) => {
+  const handleTextAreaChangeDispatch = (
+    e: ChangeEvent<HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     dispatch(handleChange({ name, value }));
   };
@@ -38,7 +40,7 @@ const Contact = () => {
             type="text"
             required
             name="name"
-            onChange={(evt) => handleChangeDispatch(evt)}
+            onChange={handleChangeDispatch}
             value={name}
           />
         </div>
@@ -50,7 +52,7 @@ const Contact = () => {
             type="email"
             required
             name="email"
-            onChange={(evt) => handleChangeDispatch(evt)}
+            onChange={handleChangeDispatch}
             value={email}
           />
         </div>
@@ -62,7 +64,7 @@ const Contact = () => {
             type="text"
             required
             name="title"
-            onChange={(evt) => handleChangeDispatch(evt)}
+            onChange={handleChangeDispatch}
             value={title}
           />
         </div>
@@ -74,14 +76,12 @@ const Contact = () => {
             rows={8}
             required
             name="description"
-            onChange={(evt) => handleTextAreaChangeDispatch(evt)}
+            onChange={handleTextAreaChangeDispatch}
             value={description}
           />
         </div>
         <div className="contact-btn">
-          <button type="submit">
-            SUBMIT
-          </button>
+          <button type="submit">SUBMIT</button>
         </div>
       </form>
     </div>

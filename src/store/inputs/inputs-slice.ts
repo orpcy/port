@@ -12,8 +12,9 @@ const inputsSlice = createSlice({
   initialState,
   reducers: {
     handleChange: (state, action) => {
-      // const { name, value } = action.payload;
-      // state[name] = value;
+      let { name, value } = action.payload;
+      const getName: keyof typeof initialState = name;
+      state[getName] = value;
     },
     resetInputs: (state) => {
       state.name = "";
