@@ -41,10 +41,10 @@ const Header = () => {
             />
           </Link>
         </nav>
-        {/* <nav className="line">
+        <nav className="line">
           <a href="#contact">CONTACT</a>
-          <Link to="/" onClick={downloadResume}>RESUME</Link>
-        </nav> */}
+          {/* <Link to="/" onClick={downloadResume}>RESUME</Link> */}
+        </nav>
       </header>
 
       <header className="header_mobile">
