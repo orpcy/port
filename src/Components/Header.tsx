@@ -41,10 +41,10 @@ const Header = () => {
             />
           </Link>
         </nav>
-        <nav className="line">
+        {/* <nav className="line">
           <a href="#contact">CONTACT</a>
           <Link to="/" onClick={downloadResume}>RESUME</Link>
-        </nav>
+        </nav> */}
       </header>
 
       <header className="header_mobile">
@@ -76,7 +76,7 @@ const Header = () => {
           <a onClick={handleMenuClose} href="#contact">
             CONTACT
           </a>
-          <Link to="/" onClick={downloadResume}>RESUME</Link>
+          {/* <Link to="/" onClick={downloadResume}>RESUME</Link> */}
         </nav>
       </div>
     </React.Fragment>
