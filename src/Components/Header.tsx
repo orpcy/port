@@ -7,23 +7,23 @@ const Header = () => {
   const handleMenuOpen = () => setMenuToggle(true);
   const handleMenuClose = () => setMenuToggle(false);
 
-  const downloadResume = () => {
-    if (window.confirm("Download SofiyullahJ Resume?")) {
-      // using Java Script method to get PDF file
-      fetch("/img/Resume.pdf").then((response) => {
-        response.blob().then((blob) => {
-          // Creating new object of PDF file
-          const fileURL = window.URL.createObjectURL(blob);
-          // Setting various property values
-          let alink = document.createElement("a");
-          alink.href = fileURL;
-          alink.download = "SofiyullahJ Resume.pdf";
-          alink.click();
-          handleMenuClose();
-        });
-      });
-    }
-  };
+  // const downloadResume = () => {
+  //   if (window.confirm("Download SofiyullahJ Resume?")) {
+  //     // using Java Script method to get PDF file
+  //     fetch("/img/Resume.pdf").then((response) => {
+  //       response.blob().then((blob) => {
+  //         // Creating new object of PDF file
+  //         const fileURL = window.URL.createObjectURL(blob);
+  //         // Setting various property values
+  //         let alink = document.createElement("a");
+  //         alink.href = fileURL;
+  //         alink.download = "SofiyullahJ Resume.pdf";
+  //         alink.click();
+  //         handleMenuClose();
+  //       });
+  //     });
+  //   }
+  // };
 
   return (
     <React.Fragment>
