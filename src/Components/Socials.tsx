@@ -28,7 +28,7 @@ const Socials = () => {
         </a>
         <hr />
       </div>
-      <div className="codementor">
+      {/* <div className="codementor">
         <a
           href="https://www.codementor.io/@sofiyullahj?refer=badge"
           target="_blank"
@@ -39,7 +39,7 @@ const Socials = () => {
             alt="Codementor badge"
           />
         </a>
-      </div>
+      </div> */}
     </div>
   );
 };
