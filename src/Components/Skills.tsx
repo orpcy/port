@@ -76,8 +76,8 @@ const Skills = () => {
       value: "98",
     },
     {
-      id: "Firebase_skill",
-      content: "Firebase",
+      id: "Jest_skill",
+      content: "Jest",
       percentage: "92%",
       value: "92",
     },
